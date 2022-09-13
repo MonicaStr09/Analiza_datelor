@@ -10,16 +10,17 @@ Analiza în Componente Principale permite abordarea caracterului multidimensiona
 Deşi la baza acestei metode stă acelaşi principiu ca şi la analiza factorială (în principiu este o metodă factorială liniară), analiza în componente principale diferă de aceasta prin modul de definire a elementelor tabelului de date iniţial şi modul de calcul al distanţelor dintre puncte. Ca metodă descriptivă de analiză a datelor se aplică doar variabilelor cantitative şi tabelelor de dimensiuni mari care cuprind informaţii referitoare la mai mult de 15 indivizi şi 4 variabile. De aceea, am ales-o pentru a analiza influența anumitor trăsături ale animalelor de la zoo.
 
 # Setul de date ales
-![image](https://user-images.githubusercontent.com/94632149/189905029-3c2b5a3d-8cb7-4ddd-aa29-b9c6cdfedfd7.png)
 
 În acest set de date, denumit zoo2.csv și extras de la adresa https://www.kaggle.com/agajorte/zoo-animals-extended-dataset  , se află 43 de observații care conțin detalii despre 13 trăsături, precum în imaginea de mai jos.
+![image](https://user-images.githubusercontent.com/94632149/189905029-3c2b5a3d-8cb7-4ddd-aa29-b9c6cdfedfd7.png)
+
 Datele sunt extrase în urmă cu 4 ani, precum este specificat și pe site și reprezintă animale din diferite clase, exceptând Mamiferele și Păsările, fiind extrem de întâlnite în multe alte seturi de date. Acest set de date este des utilizat în Machine Learning, și astfel l-am ales pentru a obține rezultate concludente și ușor de interpretat. De asemenea, este indicat pentru a fi utilizat în clasificări.
 
 
 # Rezultate si interpretari
 
 Primii pași în conceperea unei analize sunt constituiți de pregătirea unui script corespunzător ( precum cel de la seminar), care conține fișiere .py cu funcții, grafice și clase concepute în acest sens, toate integrate și apelate în fișierul main.
-Am importat librăriile necesare, am extras datele din fișierul csv, eliminând valorile NaN și păstrând totodată într-un vector numele variabilelor observate pentru utilizarea lor ulterioară, dar am și creat modelul ACP din clasa eponimă. Funcțiile integrate au generat și grafice 
+Am importat librăriile necesare, am extras datele din fișierul csv, eliminând valorile NaN și păstrând totodată într-un vector numele variabilelor observate pentru utilizarea lor ulterioară, dar am și creat modelul ACP din clasa eponimă. Funcțiile integrate au generat și grafice - 
 ![image](https://user-images.githubusercontent.com/94632149/189905297-ef95b776-e5c1-411e-b46f-8a8e53adbe8b.png)
 
  Astfel, în graficul anterior creat se află varianța componentelor din cadrul modelului meu. Componentele principale sunt construite sub formă de combinații liniare de variabile inițiale, care concentrează o cât mai mare parte din varianță. Fiecare componentă preia o parte din varianța ramasă neexplicată de cele precedente. 
@@ -42,14 +43,14 @@ Astfel, sunt salvate date pentru fiecare componentă.  Varianța pentru componen
 ![image](https://user-images.githubusercontent.com/94632149/189905992-77fc3593-dd81-48ef-a675-a7bb7d2eef39.png)
 
  Se observă că unele componente au un cosinus de aproape 1, precum animalul marlin sau trout pentru cea de-a doua componentă, denumită aquatic, ce arată dacă animalul respectiv provine din mediul acvatic sau nu. 
-În continuare, se află contribuțiile, care arată ce procent din varianța axei este datorat instanței alese. O parte din aceste contribuții salvate și într-un csv le-am ilustrat mai jos – 
+În continuare, se află contribuțiile, care arată ce procent din varianța axei este datorat instanței alese. O parte din aceste contribuții salvate și într-un csv le-am ilustrat mai jos:
 ![image](https://user-images.githubusercontent.com/94632149/189906106-d7547ea2-5596-4b77-a75f-65ae31470355.png)
 
  Din nou, se observă o contribuție mare a peștilor și a altor animale marine pentru componenta cu numărul doi, care specifică acvaticitatea animalelor, fapt ce se justifică de altfel.  
 Urmează comunalitățile - care reprezintă cantitatea de varianță explicată în comun de către un grup din componentele principale. O parte din valorile calculate sunt ilustrate și mai jos.
 ![image](https://user-images.githubusercontent.com/94632149/189906228-991b7883-e853-415e-ac12-1e09c17bd426.png)
 
- Pentru o mai bună vizualizare a rezultatelor, voi atașa și graficul desenat.
+Pentru o mai bună vizualizare a rezultatelor, voi atașa și graficul desenat.
 ![image](https://user-images.githubusercontent.com/94632149/189906304-5de7af2a-3d69-4185-ad9c-ba1f4aebc2c9.png)
 
 Aceasta manifestă procentul varianței unei variabile explicată de factorii reuniți, și poate fi interpretată ca siguranța indicatorului reprezentat de acea variabilă.
