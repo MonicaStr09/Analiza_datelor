@@ -1,6 +1,6 @@
  # Dezvoltare Software pentru Analiza Datelor
 
-                                   ANALIZA ÎN COMPONENTE PRINCIPALE - ANIMALE ZOO
+                                ANALIZA ÎN COMPONENTE PRINCIPALE - ANIMALE ZOO
  
  
 # Motivatia alegerii temei si a metodei de analiza
